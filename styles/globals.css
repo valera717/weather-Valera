@@ -40,3 +40,34 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Кнопка и рамка */
+button {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+.weather {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.weather h2 {
+  color: #333;
+}
+
+.weather p {
+  margin: 5px 0;
+  color: #555;
+}
