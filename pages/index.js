@@ -51,6 +51,7 @@ export default function WeatherPage() {
           <p>Температура: {weather.main.temp}°C</p>
           <p>Ощущается как: {weather.main.feels_like}°C</p>
           <p>Погодные условия: {weather.weather[0].description}</p>
+          <p>Скорость ветра: {weather.wind.speed} m/s</p>
         </div>
       ) : null}
     </div>
