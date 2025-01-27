@@ -71,3 +71,19 @@ button:hover {
   margin: 5px 0;
   color: #555;
 }
+
+/* Это относится к главной странице index.js */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #8a8888;
+}
+
+div {
+  box-sizing: border-box;
+}
