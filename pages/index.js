@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function HomePage() {
   const [weatherData, setWeatherData] = useState([]);
@@ -25,6 +26,11 @@ export default function HomePage() {
   return (
     <div className="main-container">
       <h1>Погода в трёх городах</h1>
+      <div style={{ marginTop: "20px" }}>
+        <Link href="/weather" className="weather-link">
+          Узнать погоду
+        </Link>
+      </div>
       <div className="weather-cards">
         {weatherData.map((weather, index) => (
           <div key={index} className="weather-card">

@@ -74,16 +74,54 @@ button:hover {
 
 /* Это относится к главной странице index.js */
 
-body {
-  margin: 0;
-  padding: 0;
+h1 {
+  text-align: center;
+}
+
+.main-container {
+  padding: 20px;
   font-family: Arial, sans-serif;
 }
 
-h1 {
-  color: #8a8888;
+.weather-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-div {
-  box-sizing: border-box;
+.weather-card {
+  border: 1px solid #ccc;
+
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-card h2 {
+  margin-bottom: 10px;
+}
+
+.weather-card p {
+  margin: 5px 0;
+}
+
+/* это для страницы "узнать погоду" */
+
+.weather-link {
+  color: rgb(8, 2, 7);
+  display: block;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.weather-link:hover {
+  color: rgb(240, 130, 218);
 }
