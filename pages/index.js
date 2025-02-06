@@ -31,6 +31,7 @@ export default function HomePage() {
           Узнать погоду
         </Link>
       </div>
+
       <div className="weather-cards">
         {weatherData.map((weather, index) => (
           <div key={index} className="weather-card">

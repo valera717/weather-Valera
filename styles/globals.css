@@ -61,6 +61,7 @@ button:hover {
   background-color: #f0f0f0;
   border-radius: 8px;
   font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 .weather h2 {
@@ -113,7 +114,7 @@ h1 {
 /* это для страницы "узнать погоду" */
 
 .weather-link {
-  color: rgb(8, 2, 7);
+  color: rgb(236, 30, 78);
   display: block;
   justify-content: center;
   font-size: 18px;
@@ -124,4 +125,78 @@ h1 {
 
 .weather-link:hover {
   color: rgb(240, 130, 218);
+}
+
+/* Настройка темы */
+
+/* Светлая */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --button-background: blue;
+  --button-text: white;
+  --link-color: #007bff;
+  --link-hover-color: rgb (240, 130, 218);
+}
+
+/* Тёмная */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --foreground: #f1f1f1;
+    --button-background: #3a3a3a;
+    --button-text: #ffffff;
+    --link-color: #00bcd4;
+    --link-hover-color: #ff66b2;
+  }
+}
+
+html,
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --link-color: #00bcd4;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--button-background);
+  color: var(--button-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+/* карточки погоды */
+.weather-card {
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 15px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.weather-card h2 {
+  margin-bottom: 10px;
+}
+
+.weather-card p {
+  margin: 5px 0;
 }
