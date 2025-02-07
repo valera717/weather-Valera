@@ -1,4 +1,6 @@
 import { useRouter } from "next/router";
+import Head from "next/head";
+import CityWeather from "../components/CityWeather";
 
 const API_KEY = "46af897914931fddfbe6bc87eee136b1";
 const cities = ["moscow", "london", "paris"];
@@ -53,13 +55,32 @@ export default function CityWeather({ weather, notFound }) {
       </div>
     );
   }
+
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
+    <div style={{ textAllign: "center", padding: "20px" }}>
+      <Head>
+        <title>Погода в {weather.name}</title>
+        <meta
+          name="description"
+          content={`Текущая погода в ${weather.name}: температура ${weather.main.temp}°C, условия ${weather.weather[0].description}.`}
+        />
+        <meta property="og:title" content={`Погода в ${weather.name}`} />
+        <meta
+          property="og:description"
+          content={`Погода в ${weather.name}: температура ${weather.main.temp}°C, ощущается как ${weather.main.feels_like}°C.`}
+        />
+        <meta property="og:image" content="URL_картинки" />
+        <meta
+          property="og:url"
+          content={`http://localhost:3000/${weather.name.toLowerCase()}`}
+        />
+      </Head>
       <h1>Погода в {weather.name}</h1>
       <p>Температура: {weather.main.temp}°C</p>
       <p>Ощущается как: {weather.main.feels_like}°C</p>
       <p>Условия: {weather.weather[0].description}</p>
       <p>Скорость ветра: {weather.wind.speed} m/s</p>
+      <CityWeather weather={weather} />
     </div>
   );
 }

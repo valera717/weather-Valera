@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function HomePage() {
   const [weatherData, setWeatherData] = useState([]);
@@ -25,6 +26,21 @@ export default function HomePage() {
   }, []);
   return (
     <div className="main-container">
+      <Head>
+        <title>Погода в трёх города</title>
+        <meta
+          name="description"
+          content="Посмотрите погоду в Москве, Лондоне и Токио. Узнайте актуальную информацию о температуре, погодных условиях и скорости ветра."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Погода в трёх городах" />
+        <meta
+          property="og:description"
+          content="Посмотрите погоду в Москве, Лондоне и Токио."
+        />
+        <meta property="og:image" content="URL_картинки" />
+        <meta property="og:url" content="http://localhost:3000" />
+      </Head>
       <h1>Погода в трёх городах</h1>
       <div style={{ marginTop: "20px" }}>
         <Link href="/weather" className="weather-link">

@@ -93,7 +93,6 @@ h1 {
 
 .weather-card {
   border: 1px solid #ccc;
-
   padding: 15px;
   width: 200px;
   text-align: center;
@@ -124,7 +123,7 @@ h1 {
 }
 
 .weather-link:hover {
-  color: rgb(240, 130, 218);
+  color: rgb(117, 10, 10);
 }
 
 /* Настройка темы */
